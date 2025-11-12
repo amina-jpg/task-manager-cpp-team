@@ -45,6 +45,18 @@ void menu() {
         else if (choice == 0) break;
         else cout << "Invalid choice!\n";
     }
+void searchTask(string keyword) {
+    cout << "Search results for: " << keyword << endl;
+    bool found = false;
+    for (auto &t : tasks) {
+        if (t.title.find(keyword) != string::npos) {
+            cout << "- " << t.title << endl;
+            found = true;
+        }
+    }
+    if (!found) cout << "No matches found." << endl;
+}
+
 }
 
 int main() {
