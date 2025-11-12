@@ -61,6 +61,16 @@ void viewTasks() {
     cout << "Displaying all tasks:" << endl;
     showAll();
 }
+    // Added by D
+void updateTask(int index, string newTitle) {
+    if (index >= 1 && index <= tasks.size()) {
+        tasks[index - 1].title = newTitle;
+        cout << "Task updated to: " << newTitle << endl;
+    } else {
+        cout << "Invalid index" << endl;
+    }
+}
+
 
 
 }
