@@ -17,6 +17,10 @@ void showAll() {
     }
     cout << "-------------------\n";
 }
+void addTask(string title){
+tasks.push_back({title,false});
+cout<< "Added: " << title <<endl;
+}
 void menu() {
     while (true) {
         cout << "\n1=Add 2=View 3=Delete 4=Update 5=Search 6=Mark 7=Save 8=Load 0=Exit\n> ";
