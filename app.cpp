@@ -56,6 +56,12 @@ void searchTask(string keyword) {
     }
     if (!found) cout << "No matches found." << endl;
 }
+    // Added by B
+void viewTasks() {
+    cout << "Displaying all tasks:" << endl;
+    showAll();
+}
+
 
 }
 
