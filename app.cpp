@@ -48,6 +48,16 @@ void searchTask(string keyword) {
     }
     if (!found) cout << "No matches found." << endl;
 }
+// Added by F
+void markComplete(int index, bool done = true) {
+    if (index >= 1 && index <= tasks.size()) {
+        tasks[index - 1].done = done;
+        cout << "Task " << index << " marked as "
+             << (done ? "complete" : "incomplete") << endl;
+    } else {
+        cout << "Invalid index" << endl;
+    }
+}
 
 void menu() {
     while (true) {
