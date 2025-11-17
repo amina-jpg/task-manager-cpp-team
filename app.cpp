@@ -9,7 +9,7 @@ struct Task {
 };
 
 vector<Task> tasks;
-//added by amina
+//added by eman
 void showAll() {
     cout << "\n---- Task List ----\n";
     for (int i = 0; i < tasks.size(); ++i) {
@@ -64,7 +64,7 @@ void searchTask(string keyword) {
     }
     if (!found) cout << "No matches found." << endl;
 }
-// Added by F
+// Added by eman
 void markComplete(int index, bool done = true) {
     if (index >= 1 && index <= tasks.size()) {
         tasks[index - 1].done = done;
