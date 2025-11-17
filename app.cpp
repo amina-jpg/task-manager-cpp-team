@@ -10,6 +10,7 @@ struct Task {
 
 vector<Task> tasks;
 //added by areesha
+//added by eman
 void showAll() {
     cout << "\n---- Task List ----\n";
     for (int i = 0; i < tasks.size(); ++i) {
@@ -52,7 +53,14 @@ void updateTask(int index, string newTitle) {
         cout << "Invalid index" << endl;
     }
 }
-
+// Added by laiba
+void deleteTask(int index) {
+    if (index >= 1 && index <= tasks.size()) {
+        cout << "Deleted: " << tasks[index - 1].title << endl;
+        tasks.erase(tasks.begin() + (index - 1));
+    } else {
+        cout << "Invalid index" << endl;
+    }}
 void searchTask(string keyword) {
     cout << "Search results for: " << keyword << endl;
     bool found = false;
@@ -64,7 +72,7 @@ void searchTask(string keyword) {
     }
     if (!found) cout << "No matches found." << endl;
 }
-// Added by F
+// Added by eman
 void markComplete(int index, bool done = true) {
     if (index >= 1 && index <= tasks.size()) {
         tasks[index - 1].done = done;
