@@ -90,7 +90,9 @@ void menu() {
     }
 }
 
-int main() {
+int main() 
+//added by taymia
+{
     cout << "Task Manager (Team Project)" << endl;
     cout << "Welcome to Team Task Manager!\n";
     menu();
