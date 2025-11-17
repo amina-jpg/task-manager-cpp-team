@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 using namespace std;
+//added by taymia
 
 struct Task {
     string title;
@@ -114,8 +115,9 @@ void menu() {
     }
 }
 
-int main() {
-    //amina
+int main() 
+//added by taymia 1
+{
     cout << "Task Manager (Team Project)" << endl;
     cout << "Welcome to Team Task Manager!\n";
     menu();
