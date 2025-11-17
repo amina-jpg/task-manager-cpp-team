@@ -9,7 +9,7 @@ struct Task {
 };
 
 vector<Task> tasks;
-
+//added by eman
 void showAll() {
     cout << "\n---- Task List ----\n";
     for (int i = 0; i < tasks.size(); ++i) {
@@ -21,6 +21,22 @@ void showAll() {
 void addTask(string title){
     tasks.push_back({title,false});
     cout<< "Added: " << title <<endl;
+}
+void loadTasks(string filename = "tasks.txt") {
+    ifstream file(filename);
+    tasks.clear();
+    string line;
+
+    while (getline(file, line)) {
+        size_t pos = line.find("|");
+        string title = line.substr(0, pos);
+
+        bool done = (line.substr(pos + 1) == "1");
+        tasks.push_back({title, done});
+    }
+
+    file.close();
+    cout << "Tasks loaded from " << filename << endl;
 }
 
 void viewTasks() {
@@ -36,7 +52,14 @@ void updateTask(int index, string newTitle) {
         cout << "Invalid index" << endl;
     }
 }
-
+// Added by laiba
+void deleteTask(int index) {
+    if (index >= 1 && index <= tasks.size()) {
+        cout << "Deleted: " << tasks[index - 1].title << endl;
+        tasks.erase(tasks.begin() + (index - 1));
+    } else {
+        cout << "Invalid index" << endl;
+    }}
 void searchTask(string keyword) {
     cout << "Search results for: " << keyword << endl;
     bool found = false;
@@ -48,7 +71,7 @@ void searchTask(string keyword) {
     }
     if (!found) cout << "No matches found." << endl;
 }
-// Added by F
+// Added by eman
 void markComplete(int index, bool done = true) {
     if (index >= 1 && index <= tasks.size()) {
         tasks[index - 1].done = done;
