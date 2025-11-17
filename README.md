@@ -1,3 +1,4 @@
+added by laiba
 void deleteTask(int index) {
     if (index >= 1 && index <= tasks.size()) {
         cout << "Deleted: " << tasks[index - 1].title << endl;
