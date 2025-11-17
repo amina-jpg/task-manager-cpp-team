@@ -1,3 +1,12 @@
+added by laiba
+void deleteTask(int index) {
+    if (index >= 1 && index <= tasks.size()) {
+        cout << "Deleted: " << tasks[index - 1].title << endl;
+        tasks.erase(tasks.begin() + (index - 1));
+    } else {
+        cout << "Invalid index" << endl;
+    }
+}
 # C++ Team Project – Feature-Based Development
 
 This project is a collaborative C++ application developed using **Git**, **GitHub**, and **feature branching workflow**.  
