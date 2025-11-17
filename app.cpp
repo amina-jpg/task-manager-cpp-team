@@ -52,7 +52,14 @@ void updateTask(int index, string newTitle) {
         cout << "Invalid index" << endl;
     }
 }
-
+// Added by laiba
+void deleteTask(int index) {
+    if (index >= 1 && index <= tasks.size()) {
+        cout << "Deleted: " << tasks[index - 1].title << endl;
+        tasks.erase(tasks.begin() + (index - 1));
+    } else {
+        cout << "Invalid index" << endl;
+    }}
 void searchTask(string keyword) {
     cout << "Search results for: " << keyword << endl;
     bool found = false;
