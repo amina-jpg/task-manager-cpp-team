@@ -22,6 +22,22 @@ void addTask(string title){
     tasks.push_back({title,false});
     cout<< "Added: " << title <<endl;
 }
+void loadTasks(string filename = "tasks.txt") {
+    ifstream file(filename);
+    tasks.clear();
+    string line;
+
+    while (getline(file, line)) {
+        size_t pos = line.find("|");
+        string title = line.substr(0, pos);
+
+        bool done = (line.substr(pos + 1) == "1");
+        tasks.push_back({title, done});
+    }
+
+    file.close();
+    cout << "Tasks loaded from " << filename << endl;
+}
 
 void viewTasks() {
     cout << "Displaying all tasks:" << endl;
