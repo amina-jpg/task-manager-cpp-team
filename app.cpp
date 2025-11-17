@@ -105,6 +105,8 @@ void searchTask(string keyword) {
     if (!found) cout << "No matches found." << endl;
 }
 // Added by eman
+ 
+// Added by eman
 void markComplete(int index, bool done = true) {
     if (index >= 1 && index <= tasks.size()) {
         tasks[index - 1].done = done;
@@ -116,6 +118,7 @@ void markComplete(int index, bool done = true) {
 }
 
 void menu() {
+    // Added by Eman F
     while (true) {
         cout << "\n1=Add 2=View 3=Update 4=Search 0=Exit\n> ";
         int choice;
