@@ -115,6 +115,12 @@ void markComplete(int index, bool done = true) {
     } else {
         cout << "Invalid index" << endl;
     }
+    // Added by B
+void viewTasks() {
+    cout << "Displaying all tasks:" << endl;
+    showAll();
+}
+
 }
 
 void menu() {
