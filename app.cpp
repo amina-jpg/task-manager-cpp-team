@@ -45,6 +45,12 @@ void menu() {
         else if (choice == 0) break;
         else cout << "Invalid choice!\n";
     }
+    // Added by B
+void viewTasks() {
+    cout << "Displaying all tasks:" << endl;
+    showAll();
+}
+
 }
 
 int main() {
