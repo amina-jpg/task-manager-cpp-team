@@ -7,7 +7,7 @@ struct Task {
     string title;
     bool done;
 };
-
+//functions
 vector<Task> tasks;
 //added by eman
 void showAll() {
