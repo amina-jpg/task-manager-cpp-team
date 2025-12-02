@@ -17,6 +17,7 @@ void showAll() {
     }
     cout << "-------------------\n";
 }
+//sadeem bahi
 void menu() {
     while (true) {
         cout << "\n1=Add 2=View 3=Delete 4=Update 5=Search 6=Mark 7=Save 8=Load 0=Exit\n> ";
