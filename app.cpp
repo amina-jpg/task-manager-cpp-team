@@ -93,6 +93,7 @@ void deleteTask(int index) {
     } else {
         cout << "Invalid index" << endl;
     }}
+//search func
 void searchTask(string keyword) {
     cout << "Search results for: " << keyword << endl;
     bool found = false;
